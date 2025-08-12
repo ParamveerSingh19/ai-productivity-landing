@@ -654,10 +654,10 @@ footer {
 @media (min-width: 1024px) {
   .dashboard-image-wrapper {
     max-width: 550px;
-    transform: translateY(-20px);
+    transform: translateY(-20px) !important;
   }
 
   .dashboard-image-wrapper:hover {
-    transform: translateY(-24px) scale(1.02);
+    transform: translateY(-24px) scale(1.02) !important;
   }
 }
