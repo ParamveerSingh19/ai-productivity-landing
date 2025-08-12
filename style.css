@@ -677,8 +677,9 @@ footer {
 /* Media query for Small Screens */
 @media (max-width: 640px) {
   .dashboard-image-wrapper {
-    max-width: 200px;
+    max-width: 100%;
     transform: translateY(0);
+    max-height: fit-content;
   }
 
   .dashboard-image-wrapper:hover {
