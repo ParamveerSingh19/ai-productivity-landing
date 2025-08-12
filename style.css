@@ -679,7 +679,7 @@ footer {
   .dashboard-image-wrapper {
     max-width: 100%;
     transform: translateY(0);
-    max-height: fit-content;
+    max-height: 400px;
   }
 
   .dashboard-image-wrapper:hover {
