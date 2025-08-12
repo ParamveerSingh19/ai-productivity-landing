@@ -650,14 +650,26 @@ footer {
   }
 }
 
+/* Media query for screens between 900px and 1023px */
+@media (min-width: 900px) and (max-width: 1023px) {
+  .dashboard-image-wrapper {
+    max-width: 380px;
+    transform: translateY(-10px);
+  }
+
+  .dashboard-image-wrapper:hover {
+    transform: translateY(-14px) scale(1.02);
+  }
+}
+
 /* Media query for large screens (lg) */
 @media (min-width: 1024px) {
   .dashboard-image-wrapper {
     max-width: 550px;
-    transform: translateY(-20px) !important;
+    transform: translateY(-20px);
   }
 
   .dashboard-image-wrapper:hover {
-    transform: translateY(-24px) scale(1.02) !important;
+    transform: translateY(-24px) scale(1.02);
   }
 }
