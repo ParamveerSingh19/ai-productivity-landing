@@ -927,13 +927,15 @@ img {
   }
 }
 
-/* Override transform on large screens for better alignment */
-@media (min-width: 900px) {
+/* Media query for Small Screens */
+@media (max-width: 640px) {
   .dashboard-image-wrapper {
-    transform: none;
+    max-width: 100%;
+    transform: translateY(0);
+    max-height: 400px;
   }
 
   .dashboard-image-wrapper:hover {
-    transform: scale(1.02);
+    transform: translateY(-2px) scale(1.01);
   }
 }
