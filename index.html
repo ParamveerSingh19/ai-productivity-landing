@@ -4,10 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AI Productivity — Landing</title>
-    <script>
-      tailwind = { config: { darkMode: "class" } };
-    </script>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -19,23 +15,21 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="theme-light">
-    <header class="fixed top-0 left-0 right-0 z-50">
-      <div class="container flex items-center justify-between py-4">
-        <div class="flex items-center gap-3">
-          <span class="text-3xl font-extrabold"
-            >AI<span style="color: var(--accent-ui)">Hub</span></span
+    <header>
+      <div class="container header-container">
+        <div class="logo-group">
+          <span class="logo-text"
+            >AI<span class="accent-ui-color">Hub</span></span
           >
-          <span class="text-sm hidden sm:block" style="color: var(--muted)"
-            >Productivity & AI</span
-          >
+          <span class="tagline">Productivity & AI</span>
         </div>
-        <nav class="hidden md:flex gap-6 items-center">
+        <nav class="desktop-nav">
           <a href="#features" class="nav-link">Features</a>
           <a href="#testimonials" class="nav-link">Testimonials</a>
           <a href="#cta" class="nav-link">Get Started</a>
         </nav>
-        <div class="flex items-center gap-4">
-          <div style="position: relative">
+        <div class="header-actions">
+          <div class="theme-wrapper">
             <button
               id="palette-btn"
               aria-label="Theme selector"
@@ -43,14 +37,7 @@
             >
               <i id="palette-icon" class="bx bx-sun"></i>
             </button>
-            <div
-              id="theme-dropdown"
-              class="hidden absolute right-0 mt-2 p-1"
-              style="
-                background: var(--card-bg);
-                border-color: var(--border-color);
-              "
-            >
+            <div id="theme-dropdown" class="theme-dropdown hidden">
               <button data-theme="theme-light">Light Theme</button>
               <button data-theme="theme-dark">Dark Theme</button>
             </div>
@@ -58,14 +45,14 @@
           <button
             id="mobile-menu-toggle"
             aria-label="Toggle navigation"
-            class="md:hidden icon-btn"
+            class="mobile-menu-btn icon-btn"
           >
             <i class="bx bx-menu"></i>
           </button>
         </div>
       </div>
       <div class="mobile-nav-menu hidden" id="mobile-nav">
-        <nav class="flex flex-col gap-2 justify-center items-center p-6">
+        <nav class="mobile-nav-links">
           <a href="#features" class="nav-link">Features</a>
           <a href="#testimonials" class="nav-link">Testimonials</a>
           <a href="#cta" class="nav-link">Get Started</a>
@@ -74,27 +61,20 @@
     </header>
 
     <div id="main-content">
-      <main class="flex-1">
-        <section class="hero text-center py-12">
-          <div
-            class="container pt-28 relative z-20 flex flex-col items-center md:flex-row md:justify-between md:text-left"
-          >
-            <div class="w-full md:w-1/2 text-center md:text-left mb-12 md:mb-0">
-              <h1 class="text-4xl md:text-5xl font-extrabold mb-4 hero-title">
-                Boost your productivity with AI
-              </h1>
-              <p
-                class="text-lg md:text-xl text-muted mb-6"
-                style="color: var(--muted)"
-              >
+      <main>
+        <section class="hero-section">
+          <div class="container hero-container">
+            <div class="hero-text-content">
+              <h1 class="hero-title">Boost your productivity with AI</h1>
+              <p class="hero-subtitle">
                 Smart automation, clear insights and effortless collaboration
                 designed for busy professionals.
               </p>
-              <div class="flex justify-center md:justify-start gap-4">
+              <div class="hero-buttons">
                 <a
                   href="#cta"
-                  class="cta-btn text-white"
-                  style="background: var(--accent-ui)"
+                  class="cta-btn"
+                  style="background: var(--accent-ui); color: white"
                   >Start Free</a
                 >
                 <a
@@ -109,7 +89,7 @@
               </div>
             </div>
 
-            <div class="w-full md:w-1/2 flex justify-center md:justify-end">
+            <div class="dashboard-image-area">
               <div class="dashboard-image-wrapper">
                 <img
                   src="images/aihub-dashboard.png"
@@ -121,50 +101,46 @@
           </div>
         </section>
 
-        <section id="features" class="py-12">
+        <section id="features" class="features-section">
           <div class="container">
-            <div class="text-center mb-12">
-              <h2 class="text-3xl md:text-4xl font-bold mb-4">
-                Discover Your New Workflow
-              </h2>
-              <p class="text-lg md:text-xl" style="color: var(--muted)">
+            <div class="section-header">
+              <h2 class="section-title">Discover Your New Workflow</h2>
+              <p class="section-subtitle">
                 AIHub's smart tools automate the mundane and focus on what
                 matters.
               </p>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-              <div class="feature-card p-6" data-selected="false">
+            <div class="features-grid">
+              <div class="feature-card" data-selected="false">
                 <img
                   src="images/feature-task.png"
                   alt="AI Task Management"
                   class="feature-image"
                 />
-                <h3 class="text-xl font-semibold mb-2">AI Task Management</h3>
-                <p style="color: var(--muted)">
+                <h3 class="feature-card-title">AI Task Management</h3>
+                <p class="feature-card-text">
                   Auto prioritize tasks and reduce decision fatigue.
                 </p>
               </div>
-              <div class="feature-card p-6" data-selected="false">
+              <div class="feature-card" data-selected="false">
                 <img
                   src="images/feature-schedule.png"
                   alt="Smart Scheduling"
                   class="feature-image"
                 />
-                <h3 class="text-xl font-semibold mb-2">Smart Scheduling</h3>
-                <p style="color: var(--muted)">
+                <h3 class="feature-card-title">Smart Scheduling</h3>
+                <p class="feature-card-text">
                   Auto schedule with conflict aware precision.
                 </p>
               </div>
-              <div class="feature-card p-6" data-selected="false">
+              <div class="feature-card" data-selected="false">
                 <img
                   src="images/feature-insights.png"
                   alt="Productivity Insights"
                   class="feature-image"
                 />
-                <h3 class="text-xl font-semibold mb-2">
-                  Productivity Insights
-                </h3>
-                <p style="color: var(--muted)">
+                <h3 class="feature-card-title">Productivity Insights</h3>
+                <p class="feature-card-text">
                   Understand time leaks and get actionable recommendations.
                 </p>
               </div>
@@ -172,12 +148,12 @@
           </div>
         </section>
 
-        <section id="testimonials" class="py-12">
+        <section id="testimonials" class="testimonials-section">
           <div class="container">
-            <h2 class="text-3xl font-bold text-center section-heading mb-8">
+            <h2 class="section-title text-center section-heading">
               What our users say
             </h2>
-            <div class="relative testimonial-slider">
+            <div class="testimonial-slider-wrapper">
               <div class="swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
@@ -241,7 +217,7 @@
                       />
                       <h4 class="font-semibold">Vikram Singh</h4>
                       <p class="feedback">
-                        “24/7 support for your workflow highly recommended.”
+                        “Unmatched workflow support, anytime.”
                       </p>
                     </div>
                   </div>
@@ -264,27 +240,27 @@
                 class="swiper-prev custom-arrow"
                 aria-label="Previous testimonial"
               >
-                <i class="bx bx-chevron-left" style="font-size: 20px"></i>
+                <i class="bx bx-chevron-left"></i>
               </div>
               <div
                 class="swiper-next custom-arrow"
                 aria-label="Next testimonial"
               >
-                <i class="bx bx-chevron-right" style="font-size: 20px"></i>
+                <i class="bx bx-chevron-right"></i>
               </div>
-              <div class="swiper-pagination mt-6"></div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
         </section>
-        <section id="cta" class="py-12 text-center">
+        <section id="cta" class="cta-section">
           <div class="container">
-            <h3 class="text-3xl font-bold mb-3">Ready to work smarter?</h3>
-            <p style="color: var(--muted)" class="mb-6">
+            <h3 class="cta-title">Ready to work smarter?</h3>
+            <p class="cta-subtitle">
               Join thousands of professionals using AIHub to reclaim their time.
             </p>
             <a
               href="#"
-              class="cta-btn px-6 py-3 rounded-lg"
+              class="cta-btn"
               style="background: var(--accent-ui); color: white"
               >Start Free Trial</a
             >
@@ -292,16 +268,12 @@
         </section>
       </main>
       <footer>
-        <div
-          class="container flex flex-col md:flex-row items-center justify-between gap-4 py-8"
-        >
-          <div class="text-center md:text-left">
-            <div style="font-weight: 600">AIHub</div>
-            <div style="color: var(--muted); font-size: 0.9rem">
-              © 2025 AIHub
-            </div>
+        <div class="container footer-content">
+          <div class="footer-info">
+            <div class="footer-logo-text">AIHub</div>
+            <div class="footer-copyright">© 2025 AIHub</div>
           </div>
-          <div class="flex gap-4 text-2xl">
+          <div class="social-links">
             <a href="https://twitter.com/?lang=en-in" class="social-icon"
               ><i class="bx bxl-twitter"></i
             ></a>

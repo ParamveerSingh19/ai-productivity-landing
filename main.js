@@ -132,34 +132,28 @@ testimonialCards.forEach((card) => {
 
 // ---------- Swiper init (testimonials) ----------
 const swiper = new Swiper(".swiper", {
-  // Better animation and grab cursor for mobile
-  loop: true,
+  loop: true, // Enable infinite looping for seamless navigation
   grabCursor: true,
 
-  // Responsive settings
-  slidesPerView: 1, // Start with one slide on mobile
+  slidesPerView: 1,
   spaceBetween: 24,
 
   breakpoints: {
-    // Tablet view
-    768: {
+    640: {
       slidesPerView: 2,
       spaceBetween: 24,
     },
-    // Desktop view
-    1024: {
+    900: {
       slidesPerView: 3,
       spaceBetween: 24,
     },
   },
 
-  // Navigation arrows
   navigation: {
     nextEl: ".swiper-next.custom-arrow",
     prevEl: ".swiper-prev.custom-arrow",
   },
 
-  // Pagination dots
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
