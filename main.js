@@ -4,7 +4,7 @@ const mainContent = document.getElementById("main-content");
 const featureCards = document.querySelectorAll(".feature-card");
 const testimonialCards = document.querySelectorAll(".testimonial");
 
-// ---------- Theme dropdown + behavior ----------
+// Theme dropdown + behavior
 const paletteBtn = document.getElementById("palette-btn");
 const themeDropdown = document.getElementById("theme-dropdown");
 const dropdownButtons = themeDropdown.querySelectorAll("button");
@@ -91,7 +91,7 @@ paletteBtn.addEventListener("keydown", (e) => {
   }
 });
 
-// ---------- Mobile navigation toggle with blur effect ----------
+// Mobile navigation toggle with blur effect
 mobileMenuToggle.addEventListener("click", () => {
   mobileNav.classList.toggle("hidden");
   mainContent.classList.toggle("blur-background");
@@ -112,7 +112,7 @@ navLinks.forEach((link) => {
   });
 });
 
-// ---------- Feature and Testimonial card selection functionality ----------
+// Feature and Testimonial card selection functionality
 function toggleCardSelection(card) {
   const isSelected = card.getAttribute("data-selected") === "true";
   card.setAttribute("data-selected", !isSelected);
@@ -130,9 +130,9 @@ testimonialCards.forEach((card) => {
   });
 });
 
-// ---------- Swiper init (testimonials) ----------
+// Swiper init (testimonials)
 const swiper = new Swiper(".swiper", {
-  loop: true, // Enable infinite looping for seamless navigation
+  loop: true,
   grabCursor: true,
 
   slidesPerView: 1,
