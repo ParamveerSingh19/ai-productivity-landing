@@ -950,4 +950,7 @@ img {
   .dashboard-image-wrapper:hover {
     transform: translateY(-2px) scale(1.01);
   }
+  .dashboard-image {
+    height: 200px;
+  }
 }
