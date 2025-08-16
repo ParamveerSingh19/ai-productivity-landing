@@ -1,10 +1,10 @@
-### 🧠 AIHub - Your AI Productivity Hub
+# 🧠 AIHub - Your AI Productivity Hub
 
 Welcome to **AIHub**, a sleek and modern landing page for an AI productivity service. This project is meticulously crafted using **HTML, CSS, and JavaScript** to showcase a clean, responsive, and engaging user experience. It features a dual-theme design, dynamic content, and a smooth user flow from first impression to a final call-to-action.
 
 ---
 
-### ✨ Features
+## ✨ Features
 
 * **Modern UI/UX Design** – A sharp, minimalist design that focuses on clarity and usability.
 * **Fully Responsive Layout** – Adapts seamlessly to desktops, tablets, and mobile devices.
@@ -18,7 +18,7 @@ Welcome to **AIHub**, a sleek and modern landing page for an AI productivity ser
 
 ---
 
-### 🚀 Technologies Used
+## 🚀 Technologies Used
 
 * **HTML5** – Semantic structure and the foundation of the web page.
 * **CSS3** – Custom styling with CSS variables for dynamic theming and responsive design using media queries.
@@ -28,7 +28,7 @@ Welcome to **AIHub**, a sleek and modern landing page for an AI productivity ser
 
 ---
 
-### 📁 Project Structure
+## 📁 Project Structure
 
 aihub/
 ├── images/           → All images for the dashboard, features, and users
@@ -41,50 +41,56 @@ aihub/
 
 ---
 
-### 💻 Getting Started
+## 💻 Getting Started
 
 You don’t need anything fancy to run this project — just a web browser.
 
-#### 🧰 Installation
+### 🧰 Installation
 
 1.  **Clone the repo:**
     `git clone https://github.com/ParamveerSingh19/aihub.git`
+    
 2.  **Open the folder:**
     `cd aihub`
+    
 3.  **Launch it:**
     Open the `index.html` file in your preferred web browser.
 
 ---
 
-### 🌐 Live Website
+## 🌐 Live Website
 
-🔗 [https://getaihub.netlify.app/]
+🔗 [https://getaihub.netlify.app](https://getaihub.netlify.app)
 
 ---
 
-### 🤝 Contributing
+## 🤝 Contributing
 
 Got ideas to improve AIHub? Contributions are welcome! 🙌
 
 1.  Fork the repository
+  
 2.  Create a feature branch:
     `git checkout -b feature/yourFeatureName`
+    
 3.  Commit your changes:
     `git commit -m "Added a new feature"`
+    
 4.  Push to your branch:
     `git push origin feature/yourFeatureName`
+    
 5.  Create a Pull Request 🚀
 
 And don’t forget to ⭐ the project if you like it!
 
 ---
 
-### 👨‍💻 Author
+## 👨‍💻 Author
 
-Made by **Paramveer Singh**
+Made by [Paramveer Singh](https://github.com/ParamveerSingh19)
 
 ---
 
-### 📄 License
+## 📄 License
 
-This project is licensed under the **MIT License**.
+This project is licensed under the [MIT License](LICENSE)
