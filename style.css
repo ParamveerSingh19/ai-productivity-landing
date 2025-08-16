@@ -938,14 +938,13 @@ img {
   }
   /* MODIFIED: Adjusted hero-container padding on mobile */
   .hero-container {
-    padding-top: 1.5rem;
+    padding-top: 2.5rem;
   }
   .dashboard-image-wrapper {
     max-width: 100%;
     transform: translateY(0);
     max-height: 400px;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding: 0.5rem; /* New: Uniform padding on all sides */
   }
 
   .dashboard-image-wrapper:hover {
