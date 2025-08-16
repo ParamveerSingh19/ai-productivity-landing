@@ -25,9 +25,7 @@ body {
   display: flex;
   flex-direction: column;
   -webkit-font-smoothing: antialiased;
-  /* ADDED: This will hide any content that overflows horizontally */
   overflow-x: hidden;
-  /* MODIFIED: Ensure a prominent background gradient across the entire page */
   background-image: linear-gradient(
       to bottom,
       rgba(var(--bg-from-rgb), 0.7),
@@ -81,7 +79,6 @@ body.theme-dark {
 
 /* Section backgrounds */
 #features {
-  /* Fix: Correct background to fill the features section without a sharp cut-off */
   background: var(--bg-via);
 }
 
@@ -103,9 +100,7 @@ footer {
   background: var(--bg-from);
 }
 
-/*
---- Header Section ---
-*/
+/* Header Section */
 header {
   position: fixed;
   top: 0;
@@ -167,23 +162,20 @@ body.theme-dark header.scrolled {
   display: flex;
   align-items: center;
   gap: 1rem;
-  /* Fixes theme dropdown position */
   position: relative;
 }
 
 .nav-link {
   color: var(--header-text);
   transition: color 0.2s ease-in-out;
-  text-decoration: none; /* This line removes the underline */
+  text-decoration: none;
 }
 
 .nav-link:hover {
   color: var(--accent-ui);
 }
 
-/*
---- Mobile Navigation (Side Drawer) ---
-*/
+/* Mobile Navigation (Side Drawer) */
 .mobile-nav-menu {
   position: fixed;
   top: 88px;
@@ -210,7 +202,7 @@ body.theme-dark .mobile-nav-menu {
 }
 
 .mobile-nav-menu.hidden {
-  transform: translateX(100%); /* Slides the menu off-screen to the right */
+  transform: translateX(100%);
 }
 
 .mobile-nav-links {
@@ -235,9 +227,7 @@ body.theme-dark .mobile-nav-menu {
   display: initial;
 }
 
-/*
---- Hero Section ---
-*/
+/* Hero Section */
 .hero-section {
   min-height: 100vh;
   display: flex;
@@ -247,7 +237,6 @@ body.theme-dark .mobile-nav-menu {
   padding-bottom: 40px;
   text-align: center;
   position: relative;
-  /* ADDED: Gradient background for the hero section */
   background-image: linear-gradient(
     135deg,
     var(--bg-via) 0%,
@@ -256,13 +245,11 @@ body.theme-dark .mobile-nav-menu {
 }
 
 .hero-container {
-  /* FIXED: Reduced padding on small screens to prevent content overflow. */
   padding-top: 3rem;
   position: relative;
   z-index: 20;
   display: flex;
   flex-direction: column;
-  /* Fix: Center align hero content on smaller screens */
   align-items: center;
   text-align: center;
 }
@@ -337,7 +324,6 @@ body.theme-dark .dashboard-image-wrapper:hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* FIXED: Ensure the hero image scales properly and is fully visible */
 .dashboard-image {
   display: block;
   width: 100%;
@@ -346,9 +332,7 @@ body.theme-dark .dashboard-image-wrapper:hover {
   object-position: center;
 }
 
-/*
---- Buttons & UI ---
-*/
+/* Buttons & UI */
 .icon-btn {
   width: 40px;
   height: 40px;
@@ -575,11 +559,10 @@ body.theme-dark .feature-card[data-selected="true"] {
 
 .testimonial {
   height: 100%;
-  /* MODIFIED: Increased padding and min-width for larger cards */
   background: var(--card-bg);
   border-radius: 12px;
-  padding: 2rem;
-  min-width: 320px;
+  padding: 1.5rem;
+  min-width: 280px;
   text-align: center;
   box-shadow: 0 8px 28px rgba(2, 6, 23, 0.06);
   border: 1px solid var(--border-color);
@@ -604,18 +587,7 @@ body.theme-dark .testimonial:hover {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
 }
 
-.testimonial[data-selected="true"] {
-  border: 2px solid var(--accent-ui);
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-}
-
-body.theme-dark .testimonial[data-selected="true"] {
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
-}
-
 .user-image {
-  /* MODIFIED: Increased size for a more prominent image */
   width: 90px;
   height: 90px;
   border-radius: 50%;
@@ -700,9 +672,7 @@ body.theme-dark .user-image {
   transition: transform 0.3s ease;
 }
 
-/*
---- Call to Action (CTA) Section ---
-*/
+/* Call to Action (CTA) Section */
 .cta-section {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -720,9 +690,7 @@ body.theme-dark .user-image {
   margin-bottom: 1.5rem;
 }
 
-/*
---- Footer Section ---
-*/
+/* Footer Section */
 footer {
   padding: 1.5rem 0;
   margin-top: 0;
@@ -766,9 +734,7 @@ footer {
   color: var(--accent-ui);
 }
 
-/*
---- General Utilities ---
-*/
+/* General Utilities */
 .container {
   max-width: 1100px;
   margin-left: auto;
@@ -807,9 +773,9 @@ footer {
 /* Disable user select on all images */
 img {
   user-select: none;
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE10+ */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 /* --- Media Queries --- */
@@ -819,77 +785,61 @@ img {
   .tagline {
     display: block;
   }
-
   .desktop-nav {
     display: flex;
   }
-
   .mobile-menu-btn {
     display: none;
   }
-
   .header-actions {
     gap: 1.5rem;
   }
-
   .hero-container {
     flex-direction: row;
     justify-content: space-between;
     text-align: left;
     padding-top: 7rem;
     padding-bottom: 2rem;
-    /* Fix: Vertically align items in the hero container */
     align-items: center;
-    /* ADDED: Gap for spacing between columns */
     gap: 2rem;
   }
-
   .hero-text-content {
     width: 50%;
     text-align: left;
     margin-bottom: 0;
   }
-
   .hero-title {
     font-size: 2.5rem;
     line-height: 1.1;
   }
-
   .hero-subtitle {
     font-size: 1.25rem;
   }
-
   .hero-buttons {
     justify-content: flex-start;
   }
-
   .dashboard-image-area {
     width: 50%;
     justify-content: flex-end;
   }
-
   .dashboard-image-wrapper {
-    /* REMOVED: max-width for more flexibility */
     max-width: none;
     width: 100%;
-    /* ADJUSTED: Padding for better visual styling */
     padding: 1.5rem;
   }
-
+  .dashboard-image {
+    max-width: 100%;
+  }
   .features-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
   .user-image {
-    /* MODIFIED: Increased size for a more prominent image on desktop */
     width: 110px;
     height: 110px;
   }
-
   .feature-image {
     height: 200px;
   }
-
   .testimonial-slider-wrapper {
     padding: 0 4rem;
   }
@@ -898,11 +848,9 @@ img {
   .custom-arrow {
     display: flex;
   }
-
   .footer-content {
     flex-direction: row;
   }
-
   .footer-info {
     text-align: left;
   }
@@ -913,19 +861,16 @@ img {
   .features-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-
   .dashboard-image-wrapper {
-    /* RESTORED: max-width for larger screens to control size */
     max-width: 600px;
     transform: translateY(-10px);
   }
-
   .dashboard-image-wrapper:hover {
     transform: translateY(-14px) scale(1.02);
   }
 }
 
-/* MOBILE fixes for hero image and text spacing */
+/* For screen sizes at least 640px wide */
 @media (max-width: 640px) {
   .hero-section {
     min-height: auto;
@@ -936,7 +881,6 @@ img {
   .hero-text-content {
     margin-bottom: 1.5rem;
   }
-  /* MODIFIED: Adjusted hero-container padding on mobile */
   .hero-container {
     padding-top: 1.5rem;
   }
@@ -944,9 +888,8 @@ img {
     max-width: 100%;
     transform: translateY(0);
     max-height: 400px;
-    padding: 0.5rem; /* New: Uniform padding on all sides */
+    padding: 0.5rem;
   }
-
   .dashboard-image-wrapper:hover {
     transform: translateY(-2px) scale(1.01);
   }
