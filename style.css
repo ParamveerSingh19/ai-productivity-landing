@@ -27,12 +27,13 @@ body {
   -webkit-font-smoothing: antialiased;
   /* ADDED: This will hide any content that overflows horizontally */
   overflow-x: hidden;
-  /* Fix: Ensure a smooth background gradient across the entire page */
-  background-image: radial-gradient(
-      at 0% 0%,
-      var(--bg-from) 0%,
-      transparent 50%
+  /* MODIFIED: Ensure a prominent background gradient across the entire page */
+  background-image: linear-gradient(
+      to bottom,
+      rgba(var(--bg-from-rgb), 0.7),
+      transparent 30vh
     ),
+    radial-gradient(at 0% 0%, var(--bg-from) 0%, transparent 50%),
     radial-gradient(at 100% 100%, var(--bg-to) 0%, transparent 50%),
     linear-gradient(135deg, var(--bg-via), var(--bg-via));
   background-size: cover;
@@ -43,6 +44,7 @@ body {
 /* Light theme */
 body.theme-light {
   --bg-from: #ffffff;
+  --bg-from-rgb: 255, 255, 255;
   --bg-via: #e6f3f5;
   --bg-to: #ffffff;
   --card-bg: rgba(255, 255, 255, 0.95);
@@ -55,12 +57,13 @@ body.theme-light {
   --dropdown-hover-text: #000000;
   --border-color: rgba(0, 0, 0, 0.06);
   --hero-title-color: #000;
-  --hero-title-shadow: none; /* No shadow */
+  --hero-title-shadow: none;
 }
 
 /* Dark theme */
 body.theme-dark {
   --bg-from: #0f172a;
+  --bg-from-rgb: 15, 23, 42;
   --bg-via: #020617;
   --bg-to: #020617;
   --card-bg: rgba(17, 24, 39, 0.92);
@@ -73,7 +76,7 @@ body.theme-dark {
   --dropdown-hover-text: #ffffff;
   --border-color: rgba(255, 255, 255, 0.06);
   --hero-title-color: #fff;
-  --hero-title-shadow: none; /* No shadow */
+  --hero-title-shadow: none;
 }
 
 /* Section backgrounds */
@@ -244,10 +247,17 @@ body.theme-dark .mobile-nav-menu {
   padding-bottom: 40px;
   text-align: center;
   position: relative;
+  /* ADDED: Gradient background for the hero section */
+  background-image: linear-gradient(
+    135deg,
+    var(--bg-via) 0%,
+    var(--bg-from) 100%
+  );
 }
 
 .hero-container {
-  padding-top: 7rem;
+  /* FIXED: Reduced padding on small screens to prevent content overflow. */
+  padding-top: 3rem;
   position: relative;
   z-index: 20;
   display: flex;
@@ -565,9 +575,11 @@ body.theme-dark .feature-card[data-selected="true"] {
 
 .testimonial {
   height: 100%;
+  /* MODIFIED: Increased padding and min-width for larger cards */
   background: var(--card-bg);
   border-radius: 12px;
-  padding: 1.5rem;
+  padding: 2rem;
+  min-width: 320px;
   text-align: center;
   box-shadow: 0 8px 28px rgba(2, 6, 23, 0.06);
   border: 1px solid var(--border-color);
@@ -603,8 +615,9 @@ body.theme-dark .testimonial[data-selected="true"] {
 }
 
 .user-image {
-  width: 66px;
-  height: 66px;
+  /* MODIFIED: Increased size for a more prominent image */
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
@@ -868,8 +881,9 @@ img {
   }
 
   .user-image {
-    width: 80px;
-    height: 80px;
+    /* MODIFIED: Increased size for a more prominent image on desktop */
+    width: 110px;
+    height: 110px;
   }
 
   .feature-image {
@@ -918,6 +932,10 @@ img {
   }
   .hero-text-content {
     margin-bottom: 1.5rem;
+  }
+  /* MODIFIED: Adjusted hero-container padding on mobile */
+  .hero-container {
+    padding-top: 1.5rem;
   }
 }
 
