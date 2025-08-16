@@ -927,6 +927,9 @@ img {
 
 /* MOBILE fixes for hero image and text spacing */
 @media (max-width: 640px) {
+  .hero-section {
+    min-height: auto;
+  }
   .dashboard-image-area {
     margin-top: 1.5rem;
   }
@@ -937,14 +940,12 @@ img {
   .hero-container {
     padding-top: 1.5rem;
   }
-}
-
-/* Media query for Small Screens */
-@media (max-width: 640px) {
   .dashboard-image-wrapper {
     max-width: 100%;
     transform: translateY(0);
     max-height: 400px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 
   .dashboard-image-wrapper:hover {
@@ -952,5 +953,7 @@ img {
   }
   .dashboard-image {
     height: 200px;
+    width: 100%;
+    object-fit: contain;
   }
 }
