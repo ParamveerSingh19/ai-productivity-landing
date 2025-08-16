@@ -58,7 +58,7 @@ You don’t need anything fancy to run this project — just a web browser.
 
 ### 🌐 Live Website
 
-🔗 [Live website URL]
+🔗 [https://getaihub.netlify.app/]
 
 ---
 
