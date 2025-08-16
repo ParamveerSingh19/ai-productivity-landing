@@ -931,7 +931,7 @@ img {
     min-height: auto;
   }
   .dashboard-image-area {
-    margin-top: 0.5rem;
+    margin-top: 0.25rem;
   }
   .hero-text-content {
     margin-bottom: 1.5rem;
@@ -951,7 +951,7 @@ img {
     transform: translateY(-2px) scale(1.01);
   }
   .dashboard-image {
-    height: 200px;
+    height: 250px;
     width: 100%;
     object-fit: contain;
   }
