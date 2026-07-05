@@ -1,4 +1,4 @@
-# 🧠 AIHub - Your AI Productivity Hub
+# 🧠 AIHub - Your AI Productivity Hub (Internship Project)
 
 Welcome to **AIHub**, a sleek and modern landing page for an AI productivity service. This project is meticulously crafted using **HTML, CSS, and JavaScript** to showcase a clean, responsive, and engaging user experience. It features a dual-theme design, dynamic content, and a smooth user flow from first impression to a final call-to-action.
 
